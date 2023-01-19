@@ -1,0 +1,36 @@
+﻿@model Shoe
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<form method="post" asp-action="Create" asp-controller="shoe" enctype="multipart/form-data">
+
+    <div class="container">
+        <div class="row">
+            <div class="mb-3 col-md-3">
+                <label asp-for="Name" class="form-label">Title1</label>
+                <input type="text" class="form-control" id="Title1" asp-for="Name" placeholder="title1">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="mb-3 col-md-3">
+                <label asp-for="Price" class="form-label">Title2</label>
+                <input type="text" class="form-control" id="Title2" asp-for="Price" placeholder="title2">
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+        </div>
+
+     
+
+        <div style="margin-bottom:20px">
+            <label asp-for="imagefile" class="form-label">ImageFile</label>
+            <input class="form-control" id="ImageFile" asp-for="imagefile" placeholder="ImageFile">
+            <span asp-validation-for="imagefile" class="text-danger"></span>
+        </div>
+    </div>
+    <div style="display:flex; align-items:center; justify-content:center">
+        <button type="submit" class="btn btn-primary">Create Shoe Slider</button>
+    </div>
+
+</form>

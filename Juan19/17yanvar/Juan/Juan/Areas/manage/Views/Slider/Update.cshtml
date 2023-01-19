@@ -1,0 +1,46 @@
+﻿@model Slider
+@{
+    ViewData["Title"] = "Update";
+}
+
+
+
+
+
+<h1>slider Shoe Update</h1>
+
+<form method="post" asp-action="Update" asp-controller="slider" enctype="multipart/form-data">
+
+    <div class="container">
+        <div class="row">
+            <div class="mb-3 col-md-3">
+                <label asp-for="Title1" class="form-label">Title1</label>
+                <input type="text" class="form-control" id="Title1" asp-for="Title1" placeholder="title1">
+                <span asp-validation-for="Title1" class="text-danger"></span>
+            </div>
+            <div class="mb-3 col-md-3">
+                <label asp-for="Title2" class="form-label">Title2</label>
+                <input type="text" class="form-control" id="Title2" asp-for="Title2" placeholder="title2">
+                <span asp-validation-for="Title2" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="mb-3 col-md-3">
+            <label asp-for="Desc" class="form-label">Desc</label>
+            <textarea style="height:100px; width:500px" class="form-control" id="Desc" asp-for="Desc" placeholder="Desc"></textarea>
+            <span asp-validation-for="Desc" class="text-danger"></span>
+
+        </div>
+
+        <div style="margin-bottom:20px">
+            <label asp-for="imagefile" class="form-label">ImageFile</label>
+            <input class="form-control" id="ImageFile" asp-for="imagefile" placeholder="ImageFile">
+            <span asp-validation-for="imagefile" class="text-danger"></span>
+        </div>
+    </div>
+    <div style="display:flex; align-items:center; justify-content:center">
+        <button type="submit" class="btn btn-primary">Create Shoe Slider</button>
+    </div>
+
+</form>
+
